@@ -3,7 +3,9 @@ function add(numbers){
     if(!numbers){
         return 0;
     } else {
-        let nums = numbers.split(',');
+        let delimiter = /,|\n/;
+        let nums = numbers.split(delimiter);
+        console.log(nums);
         let negativeNum = [];
 
         sum = nums.reduce((acc,elem)=>{
@@ -20,6 +22,6 @@ function add(numbers){
     }
 }
 
-// console.log(add('3,5,-1,-3'));
+console.log(add('3\n3\n,5'));
 
 module.exports = add;
