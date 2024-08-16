@@ -10,7 +10,6 @@ function add(numbers){
             numbers = numbers.substring(delimiterEndIndex + 1);
         }
         let nums = numbers.split(delimiter);
-        console.log(nums);
         let negativeNum = [];
         sum = nums.reduce((acc,elem)=>{
                 let parseNum = parseInt(elem);
@@ -25,7 +24,5 @@ function add(numbers){
         return sum;
     }
 }
-
-console.log(add('3\n3\n,5'));
 
 module.exports = add;
