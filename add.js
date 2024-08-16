@@ -4,10 +4,14 @@ function add(numbers){
         return 0;
     } else {
         let delimiter = /,|\n/;
+        if (numbers.startsWith("//")) {
+            const delimiterEndIndex = numbers.indexOf("\n");
+            delimiter = new RegExp(numbers.substring(2, delimiterEndIndex));
+            numbers = numbers.substring(delimiterEndIndex + 1);
+        }
         let nums = numbers.split(delimiter);
         console.log(nums);
         let negativeNum = [];
-
         sum = nums.reduce((acc,elem)=>{
                 let parseNum = parseInt(elem);
                 if(parseNum < 0){

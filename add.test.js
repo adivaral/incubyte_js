@@ -6,15 +6,15 @@ describe('String Calculator', () => {
     });
 
     test('should return input number if there is only one input',()=> {
-        expect(add("1").tobe(1));
+        expect(add("1")).toBe(1);
     });
 
     test('should accept multiple numbers as input',()=> {
-            expect(add("1,4,6").tobe(11));
+            expect(add("1,4,6")).toBe(11);
     });
 
     test('should check new line in beetween numbers , and handle them',()=> {
-        expect(add("1/n4,6").tobe(11));
+        expect(add("1\n4,6")).toBe(11);
     });
 
     test('should handle different delimiters', () => {
