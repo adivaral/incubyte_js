@@ -13,4 +13,8 @@ describe('String Calculator', () => {
             expect(add("1,4,6").tobe(11));
     });
 
+    test('should check new line in beetween numbers , and handle them',()=> {
+        expect(add("1/n4,6").tobe(11));
+    });
+
 });
