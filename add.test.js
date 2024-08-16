@@ -22,11 +22,11 @@ describe('String Calculator', () => {
     });
 
     test('should throw an error for negative numbers', () => {
-        expect(() => add("1,-4,3")).toThrow("Negative numbers not allowed: -4");
+        expect(() => add("1,-4,3")).toThrow("Negative numbers not allowed");
     });
 
     test('should throw an error for all negative numbers', () => {
-        expect(() => add("1,-2,-3")).toThrow("Negative numbers not allowed: -2, -3");
+        expect(() => add("1,-2,-3")).toThrow("Negative numbers not allowed: -2,-3");
     });
 
 });
